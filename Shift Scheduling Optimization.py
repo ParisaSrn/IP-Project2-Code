@@ -9,8 +9,8 @@ import numpy as np
 import pandas as pd
 
 #Importing Data
-datafile = "C:/Users/psahr/Desktop/demand_1.csv"
-file = "C:/Users/psahr/Desktop/IP Project2 Data.TXT"
+datafile = "demand_1.csv"
+file = "IP Project2 Data.TXT"
 X=np.loadtxt(file, skiprows=2).astype(int)
 R = pd.read_csv(datafile,header=None)
 
@@ -57,4 +57,4 @@ modell.params.DualReductions = 0
 #modell.feasRelaxS(0, True, False, True)
 modell.optimize()
 modell.computeIIS()
-modell.write("model.ilp")
+modell.write("model.lp")
